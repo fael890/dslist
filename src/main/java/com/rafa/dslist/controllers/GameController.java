@@ -13,6 +13,7 @@ import com.rafa.dslist.dto.GameMinDTO;
 import com.rafa.dslist.services.GameService;
 
 
+
 @RestController
 @RequestMapping(value = "/games")
 public class GameController {

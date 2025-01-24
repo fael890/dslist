@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.rafa.dslist.dto.GameListDTO;
 import com.rafa.dslist.dto.GameMinDTO;
+import com.rafa.dslist.dto.ReplacementDTO;
 import com.rafa.dslist.services.GameListService;
 import com.rafa.dslist.services.GameService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/lists")
@@ -34,4 +37,9 @@ public class GameListController {
         return result;
     }
     
+    @PostMapping(value = "/{gameListId}/replacement")
+    public void getMethodName(@PathVariable Long gameListId, @RequestBody ReplacementDTO body) {
+        System.out.println("====================" + body.getSourceIndex() + body.getDestinationIndex());
+        gameListService.moveGamePosition(gameListId, body.getSourceIndex(), body.getDestinationIndex());
+    }   
 }
