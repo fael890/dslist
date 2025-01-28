@@ -1,5 +1,6 @@
 package com.rafa.dslist.entities;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,7 +12,9 @@ import jakarta.persistence.Table;
 public class GameList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Unique indenfier value of the game list", example = "1")
     private Long id;
+    @Schema(description = "Game list name", example = "MMO RPG")
     private String name;
 
     public GameList() {

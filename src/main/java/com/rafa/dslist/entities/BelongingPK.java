@@ -1,5 +1,6 @@
 package com.rafa.dslist.entities;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -8,9 +9,11 @@ import jakarta.persistence.ManyToOne;
 public class BelongingPK {
     @ManyToOne
     @JoinColumn(name = "game_id")
+    @Schema(description = "Unique value for indentify game", example = "4")
     private Game game;
     @ManyToOne
     @JoinColumn(name = "list_id")
+    @Schema(description = "Unique value for indentify game list", example = "1")
     private GameList list;
 
     public BelongingPK() {

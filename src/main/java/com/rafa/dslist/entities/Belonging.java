@@ -1,5 +1,6 @@
 package com.rafa.dslist.entities;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -8,8 +9,9 @@ import jakarta.persistence.Table;
 @Table(name = "tb_belonging")
 public class Belonging {
     @EmbeddedId
+    @Schema(description = "Composite identifier value of the belonging(itermediate between game and game list)")
     private BelongingPK id = new BelongingPK();
-
+    @Schema(description = "Game position in the list", example = "3")
     private Integer position;
 
     public Belonging(Game game, GameList list, Integer position){
