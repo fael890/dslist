@@ -84,6 +84,7 @@ Caso queira explorar mais o projeto, é possível configurar um ambiente de homo
 4. Após acessar o pgAdmin, cadastre um novo servidor utilizando as credenciais conforme mostrado nas imagens abaixo:
 ![alt text](image-1.png)
 ![alt text](image-2.png)
+
 A senha é: 1234567
 É importante que seja os mesmos dados da imagem, pois estão configurados no **docker-compose.yml**
 
