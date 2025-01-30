@@ -88,8 +88,8 @@ Caso queira explorar mais o projeto, é possível configurar um ambiente de homo
 A senha é: 1234567
 É importante que sejam os mesmos dados da imagem, pois estão configurados no **docker-compose.yml**
 
-1. Agora é possível testar o projeto no ambiente de homologação. Adicione dados no postgreSQL, para facilitar deixei um script com alguns dados aqui no diretório raiz do projeto ```/dslist/create.sql```
+5. Agora é possível testar o projeto no ambiente de homologação. Adicione dados no postgreSQL, para facilitar deixei um script com alguns dados aqui no diretório raiz do projeto ```/dslist/create.sql```
 
-2. Agora basta executar a API normalmente com:
+6. Agora basta executar a API normalmente com:
    ```mvn spring-boot:run```
    Dessa forma, os dados serão armazenados no PostgreSQL dentro do container, garantindo persistência mesmo que o container seja reiniciado.
