@@ -64,7 +64,6 @@ No diretório **resources**, há perfis de configuração para diferentes ambien
 
 Caso queira mais detalhes da documentação, após executar o projeto acesse o endereço http://localhost:8080/swagger-ui/index.html
 
-
 ### Opcional: Ambiente de Homologação com Docker
 Caso queira explorar mais o projeto, é possível configurar um ambiente de homologação (staging) com Docker. Para isso, siga os passos:
 
@@ -81,11 +80,15 @@ Caso queira explorar mais o projeto, é possível configurar um ambiente de homo
 3. Com os containers em execução, acesse o pgAdmin (http://localhost:5050) e faça login com as seguintes credenciais:
    - **E-mail:** ```me@example.com```
    - **Senha:** ```1234567```
-   - 
+  
 4. Após acessar o pgAdmin, cadastre um novo servidor utilizando as credenciais conforme mostrado nas imagens abaixo:
 ![alt text](image-1.png)
 ![alt text](image-2.png)
+A senha é: 1234567
+É importante que seja os mesmos dados da imagem, pois estão configurados no **docker-compose.yml**
 
-1. Agora basta executar a API normalmente com:
+5. Agora é possível testar o projeto no ambiente de homologação. Adicione dados no postgreSQL, para facilitar deixei um script com alguns dados aqui no diretório raiz do projeto ```/dslist/create.sql```
+
+6. Agora basta executar a API normalmente com:
    ```mvn spring-boot:run```
    Dessa forma, os dados serão armazenados no PostgreSQL dentro do container, garantindo persistência mesmo que o container seja reiniciado.
