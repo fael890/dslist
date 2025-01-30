@@ -82,14 +82,14 @@ Caso queira explorar mais o projeto, é possível configurar um ambiente de homo
    - **Senha:** ```1234567```
   
 4. Após acessar o pgAdmin, cadastre um novo servidor utilizando as credenciais conforme mostrado nas imagens abaixo:
-![alt text](image-1.png)
-![alt text](image-2.png)
+![credenciais do postgre](image-1.png)
+![credenciais do postgre](image-2.png)
 
 A senha é: 1234567
 É importante que sejam os mesmos dados da imagem, pois estão configurados no **docker-compose.yml**
 
-6. Agora é possível testar o projeto no ambiente de homologação. Adicione dados no postgreSQL, para facilitar deixei um script com alguns dados aqui no diretório raiz do projeto ```/dslist/create.sql```
+1. Agora é possível testar o projeto no ambiente de homologação. Adicione dados no postgreSQL, para facilitar deixei um script com alguns dados aqui no diretório raiz do projeto ```/dslist/create.sql```
 
-7. Agora basta executar a API normalmente com:
+2. Agora basta executar a API normalmente com:
    ```mvn spring-boot:run```
    Dessa forma, os dados serão armazenados no PostgreSQL dentro do container, garantindo persistência mesmo que o container seja reiniciado.
