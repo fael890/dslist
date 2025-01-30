@@ -85,7 +85,7 @@ Caso queira explorar mais o projeto, é possível configurar um ambiente de homo
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 A senha é: 1234567
-É importante que seja os mesmos dados da imagem, pois estão configurados no **docker-compose.yml**
+É importante que sejam os mesmos dados da imagem, pois estão configurados no **docker-compose.yml**
 
 5. Agora é possível testar o projeto no ambiente de homologação. Adicione dados no postgreSQL, para facilitar deixei um script com alguns dados aqui no diretório raiz do projeto ```/dslist/create.sql```
 
